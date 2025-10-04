@@ -9,7 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@rollup/rollup-darwin-arm64": "^4.50.2",
     "@tailwindcss/postcss": "^4.0.0",
     "autoprefixer": "^10.4.21",
     "next": "15.5.2",
@@ -22,7 +21,6 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@sanity/cli": "^4.8.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

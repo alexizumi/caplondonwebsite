@@ -1,0 +1,349 @@
+{
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "services": "Cultos",
+    "events": "Eventos",
+    "contact": "Contato",
+    "team": "Equipe"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Algo deu errado",
+    "readMore": "Leia Mais",
+    "learnMore": "Saiba Mais",
+    "contactUs": "Entre em Contato",
+    "joinUs": "Junte-se a Nós",
+    "prayerRequest": "Pedido de Oração"
+  },
+  "homepage": {
+    "hero": {
+      "title": "Bem-vindos à CAP London Church",
+      "subtitle": "Uma Igreja Família, Apostólica e Profética",
+      "description": "Junte-se à nossa comunidade e descubra seu propósito divino em Cristo Jesus.",
+      "cta": "Participe da Nossa Celebração"
+    },
+    "mission": {
+      "title": "Nossa Missão",
+      "description": "Levar todo homem cativo a viver o resgate pleno em Cristo Jesus pelo conhecimento de Deus e de Sua Palavra."
+    },
+    "vision": {
+      "title": "Nossa Visão",
+      "description": "Uma igreja família que faz discípulos que refletem e manifestam a Glória de Deus, destruindo as obras do mal e alcançando o próximo."
+    },
+    "pillars": {
+      "title": "Nossos Cinco Pilares",
+      "family": "Relacionamento",
+      "discipleship": "Discipulado",
+      "worship": "Adoração",
+      "ministry": "Ministério",
+      "evangelism": "Evangelismo"
+    },
+    "contactSection": {
+      "title": "Entre em Contato",
+      "description": "Gostaríamos muito de ouvir de você e recebê-lo em nossa igreja.",
+      "cta": "Fale Conosco",
+      "location": "The Greyhound, 313-315 Kirkdale, London, UK, SE26 4QB",
+      "phone": "+44 20 1234 5678",
+      "email": "info@caplondonchurch.co.uk",
+      "locationTitle": "Nossa Localização",
+      "phoneTitle": "Ligue para Nós",
+      "emailTitle": "Envie um Email"
+    }
+  },
+  "about": {
+    "title": "Sobre Nós",
+    "subtitle": "Descubra nosso coração, missão e visão",
+    "mission": {
+      "title": "Nossa Missão",
+      "description": "Levar todo homem cativo a viver o resgate pleno em Cristo Jesus pelo conhecimento de Deus e de Sua Palavra."
+    },
+    "vision": {
+      "title": "Nossa Visão",
+      "description": "Uma igreja família que faz discípulos que refletem e manifestam a Glória de Deus, destruindo as obras do mal e alcançando o próximo."
+    },
+    "pillars": {
+      "title": "Nossos Cinco Pilares",
+      "subtitle": "As pedras fundamentais que orientam tudo o que fazemos como família da igreja",
+      "family": {
+        "title": "Relacionamento",
+        "description": "Somos mais que uma congregação; somos uma família. Toda pessoa que passa por nossas portas é recebida de braços abertos e amor genuíno, criando um ambiente onde relacionamentos autênticos florescem."
+      },
+      "discipleship": {
+        "title": "Discipulado",
+        "description": "Estamos comprometidos em ajudar cada crente a crescer em seu relacionamento com Cristo através de ensinamento intencional, estudo bíblico e aplicação prática da Palavra de Deus na vida diária."
+      },
+      "worship": {
+        "title": "Adoração",
+        "description": "Nossa adoração é apaixonada, autêntica e guiada pelo Espírito. Acreditamos que a verdadeira adoração transforma corações e cria uma atmosfera onde a presença de Deus é tangível e experimentada."
+      },
+      "ministry": {
+        "title": "Ministério",
+        "description": "Cada membro é equipado e capacitado para servir de acordo com seus dons e chamado dados por Deus. Acreditamos que o ministério não se limita ao púlpito, mas se estende a todas as áreas da vida e serviço."
+      },
+      "evangelism": {
+        "title": "Evangelismo",
+        "description": "Somos apaixonados por compartilhar o Evangelho e alcançar os perdidos. Através de evangelismo organizado e testemunho pessoal, nos esforçamos para levar a esperança de Cristo à nossa comunidade e além."
+      }
+    },
+    "leadership": {
+      "title": "Nossa Liderança",
+      "subtitle": "Líderes apaixonados comprometidos em servir a Deus e Seu povo",
+      "member1": {
+        "name": "Pastor Alexandre Izumi",
+        "role": "Pastor Principal",
+        "description": "Liderando com paixão e dedicação para ver vidas transformadas pelo poder de Deus."
+      },
+      "member2": {
+        "name": "Pastora Tânia Izumi",
+        "role": "Pastora Principal",
+        "description": "Comprometida com o discipulado e ajudando os crentes a crescerem em sua jornada de fé."
+      },
+      "member3": {
+        "name": "Apóstolo Jean Fraga",
+        "role": "Líder da CAP Church",
+        "description": "Apaixonado por levantar a próxima geração para os propósitos do reino de Deus."
+      },
+      "member4": {
+        "name": "Apóstola Daniela Fraga",
+        "role": "Líder da CAP Church",
+        "description": "Apaixonada pela manifestação da Glória de Deus e o seu ensino à próxima geração."
+      }
+    },
+    "cta": {
+      "title": "Junte-se à Nossa Família",
+      "description": "Convidamos você a fazer parte da nossa família da igreja e descobrir seu propósito em Cristo.",
+      "button": "Visite-nos neste Domingo"
+    }
+  },
+  "services": {
+    "title": "Horários dos Cultos",
+    "subtitle": "Junte-se a nós para adoração, comunhão e crescimento espiritual",
+    "weekly": {
+      "title": "Cultos Semanais",
+      "subtitle": "Encontros regulares que formam o coração da nossa vida da igreja"
+    },
+    "sunday": {
+      "title": "Celebração da Família",
+      "time": "10:00",
+      "description": "Nosso principal culto de adoração com louvor dinâmico, pregação poderosa e comunhão genuína.",
+      "worship": "Adoração e louvor cheios do Espírito",
+      "preaching": "Ensino e pregação bíblicos",
+      "fellowship": "Comunidade e conexão",
+      "prayer": "Tempo de oração e ministração"
+    },
+    "tuesday": {
+      "title": "Reunião de Oração",
+      "time": "19:00",
+      "description": "Um tempo poderoso de oração coletiva, intercessão e busca da face de Deus juntos.",
+      "intercession": "Intercessão pelas nações",
+      "healing": "Oração por cura e libertação",
+      "breakthrough": "Guerra espiritual e vitória",
+      "community": "Pedidos de oração da comunidade"
+    },
+    "thursday": {
+      "title": "Estudo Bíblico",
+      "time": "19:00",
+      "description": "Mergulho profundo na Palavra de Deus com aplicação prática para a vida cotidiana.",
+      "study": "Estudo bíblico versículo por versículo",
+      "discussion": "Discussão interativa e perguntas",
+      "growth": "Crescimento e maturidade espiritual",
+      "application": "Aplicação prática na vida"
+    },
+    "special": {
+      "title": "Cultos Especiais",
+      "subtitle": "Encontros adicionais para grupos e propósitos específicos",
+      "youth": {
+        "title": "Culto de Jovens",
+        "time": "Sexta 19:30",
+        "description": "Adoração de alta energia e ensino relevante projetado especificamente para jovens."
+      },
+      "womens": {
+        "title": "Comunhão Feminina",
+        "time": "Sábado 14:00",
+        "description": "Um tempo para as mulheres se conectarem, encorajarem umas às outras e crescerem juntas na fé."
+      },
+      "mens": {
+        "title": "Café da Manhã dos Homens",
+        "time": "Sábado 08:00",
+        "description": "Encontro mensal para os homens confraternizarem, compartilharem e se fortalecerem uns aos outros na fé."
+      },
+      "children": {
+        "title": "Ministério Infantil",
+        "time": "Domingo 10:00",
+        "description": "Ensino e atividades apropriadas para a idade que ajudam as crianças a conhecer e amar Jesus."
+      }
+    },
+    "expect": {
+      "title": "O Que Esperar",
+      "subtitle": "Sua primeira visita conosco",
+      "worship": {
+        "title": "Adoração Apaixonada",
+        "description": "Experimente adoração sincera com música contemporânea e hinos tradicionais."
+      },
+      "word": {
+        "title": "Ensino Bíblico",
+        "description": "Receba mensagens práticas e transformadoras enraizadas na Palavra de Deus."
+      },
+      "community": {
+        "title": "Comunidade Acolhedora",
+        "description": "Sinta-se bem-vindo e valorizado como parte da nossa família da igreja desde o primeiro dia."
+      }
+    },
+    "cta": {
+      "title": "Junte-se a Nós neste Domingo",
+      "description": "Mal podemos esperar para conhecê-lo e recebê-lo em nossa família da igreja.",
+      "button": "Planeje Sua Visita"
+    }
+  },
+  "events": {
+    "title": "Eventos",
+    "subtitle": "Mantenha-se conectado com tudo que está acontecendo em nossa comunidade da igreja",
+    "featured": {
+      "title": "Eventos em Destaque",
+      "subtitle": "Não perca esses encontros especiais que se aproximam"
+    },
+    "upcoming": {
+      "title": "Próximos Eventos",
+      "subtitle": "Marque seu calendário para essas oportunidades emocionantes",
+      "event1": {
+        "title": "Noite de Adoração",
+        "description": "Uma noite dedicada à adoração apaixonada e ao encontro com a presença de Deus.",
+        "location": "Santuário Principal"
+      },
+      "event2": {
+        "title": "Conferência Profética",
+        "description": "Três dias de ministério profético poderoso e libertação espiritual.",
+        "location": "Edifício da Igreja"
+      },
+      "event3": {
+        "title": "Avivamento Jovem",
+        "description": "Adoração de alta energia e mensagens transformadoras para jovens.",
+        "location": "Salão dos Jovens"
+      },
+      "event4": {
+        "title": "Evangelismo Comunitário",
+        "description": "Servindo nossa comunidade local com amor e assistência prática.",
+        "location": "Comunidade Local"
+      }
+    },
+    "categories": {
+      "all": "Todos os Eventos",
+      "worship": "Adoração",
+      "conference": "Conferência",
+      "community": "Comunidade",
+      "youth": "Jovens",
+      "special": "Especial"
+    },
+    "regular": {
+      "title": "Programação Regular",
+      "subtitle": "Nossos encontros semanais com os quais você sempre pode contar",
+      "sunday": {
+        "title": "Culto Dominical",
+        "time": "10:00",
+        "description": "Culto principal de adoração"
+      },
+      "tuesday": {
+        "title": "Reunião de Oração",
+        "time": "19:00",
+        "description": "Tempo de oração coletiva"
+      },
+      "thursday": {
+        "title": "Estudo Bíblico",
+        "time": "19:30",
+        "description": "Estudo bíblico profundo"
+      }
+    },
+    "register": "Inscreva-se Agora",
+    "learnMore": "Saiba Mais",
+    "cta": {
+      "title": "Mantenha-se Atualizado",
+      "description": "Nunca perca um evento! Inscreva-se em nossa newsletter para as últimas atualizações.",
+      "subscribe": "Inscrever-se na Newsletter",
+      "contact": "Entre em Contato"
+    }
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Gostaríamos muito de ouvir de você e responder qualquer pergunta que possa ter",
+    "info": {
+      "title": "Entre em Contato",
+      "subtitle": "Aqui estão todas as maneiras de nos alcançar",
+      "address": {
+        "title": "Nossa Localização",
+        "line1": "The Greyhound, 313-315 Kirkdale",
+        "line2": "Londres, Reino Unido",
+        "line3": "SE26 4QB"
+      },
+      "phone": {
+        "title": "Ligue para Nós"
+      },
+      "email": {
+        "title": "Envie um Email"
+      },
+      "hours": {
+        "title": "Horário de Funcionamento",
+        "weekdays": "Seg-Sex: 09:00 - 17:00",
+        "saturday": "Sábado: 10:00 - 14:00",
+        "sunday": "Domingo: Após o Culto"
+      }
+    },
+    "form": {
+      "title": "Envie-nos uma Mensagem",
+      "subtitle": "Preencha o formulário abaixo e entraremos em contato o mais breve possível",
+      "name": "Nome Completo",
+      "namePlaceholder": "Digite seu nome completo",
+      "email": "Endereço de Email",
+      "emailPlaceholder": "Digite seu endereço de email",
+      "phone": "Número de Telefone",
+      "phonePlaceholder": "Digite seu número de telefone",
+      "subject": "Assunto",
+      "selectSubject": "Selecione um assunto",
+      "subjects": {
+        "general": "Consulta Geral",
+        "prayer": "Pedido de Oração",
+        "pastoral": "Cuidado Pastoral",
+        "events": "Eventos e Programas",
+        "volunteer": "Oportunidades de Voluntariado",
+        "other": "Outro"
+      },
+      "message": "Mensagem",
+      "messagePlaceholder": "Conte-nos como podemos ajudá-lo...",
+      "prayerRequest": "Este é um pedido de oração (será tratado confidencialmente)",
+      "submit": "Enviar Mensagem"
+    },
+    "location": {
+      "title": "Encontre-nos",
+      "subtitle": "Estamos localizados no coração de Londres e facilmente acessíveis por transporte público",
+      "mapPlaceholder": "Mapa Interativo em Breve",
+      "mapNote": "A integração com Google Maps será adicionada aqui"
+    },
+    "directions": {
+      "tube": {
+        "title": "De Metrô",
+        "description": "Estações mais próximas: Westminster (5 min a pé), Victoria (8 min a pé)"
+      },
+      "bus": {
+        "title": "De Ônibus",
+        "description": "Várias rotas de ônibus param nas proximidades. Consulte TfL para horários atuais."
+      },
+      "car": {
+        "title": "De Carro",
+        "description": "Estacionamento limitado disponível. Estacionamentos públicos próximos aos fins de semana."
+      }
+    }
+  },
+  "footer": {
+    "description": "Uma Igreja Família Apostólica e Profética em Londres, levando todo homem cativo a viver o resgate pleno em Cristo Jesus pelo conhecimento de Deus e de Sua Palavra.",
+    "address": "The Greyhound, 313-315 Kirkdale, Sydenham, London, UK, SE26 4QB",
+    "quickLinks": "Links Rápidos",
+    "serviceTimes": "Horários dos Cultos",
+    "followUs": "Siga-nos",
+    "sunday": "Celebração de Domingo",
+    "tuesday": "Reunião de Oração",
+    "thursday": "Estudo Bíblico",
+    "allRightsReserved": "Todos os direitos reservados.",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço"
+  }
+}

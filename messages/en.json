@@ -1,0 +1,349 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "events": "Events",
+    "contact": "Contact",
+    "team": "Team"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "joinUs": "Join Us",
+    "prayerRequest": "Prayer Request"
+  },
+  "homepage": {
+    "hero": {
+      "title": "Welcome to CAP London Church",
+      "subtitle": "An Apostolic and Prophetic Family Church",
+      "description": "Join our community and discover your divine purpose in Christ Jesus.",
+      "cta": "Join Our Sunday Celebration"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To lead every captive person to live the full rescue in Christ Jesus through the knowledge of God and His Word."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "A family church that makes disciples who reflect and manifest God's Glory, destroying the works of evil and reaching their neighbors."
+    },
+    "pillars": {
+      "title": "Our Five Pillars",
+      "family": "Family",
+      "discipleship": "Discipleship",
+      "worship": "Worship",
+      "ministry": "Ministry",
+      "evangelism": "Evangelism"
+    },
+    "contactSection": {
+      "title": "Get In Touch",
+      "description": "We'd love to hear from you and welcome you to our church family.",
+      "cta": "Contact Us",
+      "location": "The Greyhound, 313-315 Kirkdale, London, UK, SE26 4QB",
+      "phone": "+44 20 1234 5678",
+      "email": "info@caplondonchurch.co.uk",
+      "locationTitle": "Our Location",
+      "phoneTitle": "Call Us",
+      "emailTitle": "Email Us"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Discover our heart, mission, and vision",
+    "mission": {
+      "title": "Our Mission",
+      "description": "We have a clear mission: \"To lead every captive person to live the full rescue in Christ Jesus through the knowledge of God and His Word\". We believe that every person has the potential to experience God's transformative power and live in the fullness of His purpose."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "A family church that makes disciples who reflect and manifest God's Glory, destroying the works of evil and reaching their neighbours. We envision a community where every member grows in faith, serves with passion, and impacts their world for Christ."
+    },
+    "pillars": {
+      "title": "Our Five Pillars",
+      "subtitle": "The foundation stones that guide everything we do as a church family",
+      "family": {
+        "title": "Relationship",
+        "description": "We are more than a congregation; we are a family. Every person who walks through our doors is welcomed with open arms and genuine love, creating an environment where authentic relationships flourish."
+      },
+      "discipleship": {
+        "title": "Discipleship",
+        "description": "We are committed to helping every believer grow in their relationship with Christ through intentional mentoring, Bible study, and practical application of God's Word in daily life."
+      },
+      "worship": {
+        "title": "Worship",
+        "description": "Our worship is passionate, authentic, and Spirit-led. We believe that true worship transforms hearts and creates an atmosphere where God's presence is tangibly felt and experienced."
+      },
+      "ministry": {
+        "title": "Ministry",
+        "description": "Every member is equipped and empowered to serve according to their God-given gifts and calling. We believe that ministry is not limited to the pulpit but extends to every area of life and service."
+      },
+      "evangelism": {
+        "title": "Evangelism",
+        "description": "We are passionate about sharing the Gospel and reaching the lost. Through both organized outreach and personal witness, we strive to bring the hope of Christ to our community and beyond."
+      }
+    },
+    "leadership": {
+      "title": "Our Leadership",
+      "subtitle": "Passionate leaders committed to serving God and His people",
+      "member1": {
+        "name": "Pastor Alexandre Izumi",
+        "role": "Senior Pastor",
+        "description": "Leading with passion and dedication to see lives transformed by the power of God."
+      },
+      "member2": {
+        "name": "Pastor Tânia Izumi",
+        "role": "Senior Pastor",
+        "description": "Committed to discipleship and teaching believers grow in their faith journey."
+      },
+      "member3": {
+        "name": "Apostle Jean Fraga",
+        "role": "Denomination Leader",
+        "description": "Passionate about raising up the next generation for God's kingdom purposes."
+      },
+      "member4": {
+        "name": "Apostle Daniela Fraga",
+        "role": "Denomination Leader",
+        "description": "Devoted to a life of worship and equipping others to encounter God through wholehearted praise and teaching"
+      }
+    },
+    "cta": {
+      "title": "Join Our Family",
+      "description": "We invite you to become part of our church family and discover your purpose in Christ.",
+      "button": "Visit Us This Sunday"
+    }
+  },
+  "services": {
+    "title": "Service Times",
+    "subtitle": "Join us for worship, fellowship, and spiritual growth",
+    "weekly": {
+      "title": "Weekly Schedule",
+      "subtitle": "Regular gatherings that form the heart of our church life"
+    },
+    "sunday": {
+      "title": "Sunday Celebration",
+      "time": "10:00 AM",
+      "description": "Our main worship service featuring dynamic praise, powerful preaching, and genuine fellowship.",
+      "worship": "Spirit-filled worship and praise",
+      "preaching": "Biblical teaching and preaching",
+      "fellowship": "Community and connection",
+      "prayer": "Prayer and ministry time"
+    },
+    "tuesday": {
+      "title": "Prayer Meeting",
+      "time": "7:00 PM",
+      "description": "A powerful time of corporate prayer, intercession, and seeking God's face together.",
+      "intercession": "Intercession for the nations",
+      "healing": "Prayer for healing and breakthrough",
+      "breakthrough": "Spiritual warfare and victory",
+      "community": "Community prayer requests"
+    },
+    "thursday": {
+      "title": "Bible Study",
+      "time": "7:00 PM",
+      "description": "Deep dive into God's Word with practical application for everyday living.",
+      "study": "Verse-by-verse Bible study",
+      "discussion": "Interactive discussion and questions",
+      "growth": "Spiritual growth and maturity",
+      "application": "Practical life application"
+    },
+    "special": {
+      "title": "Special Services",
+      "subtitle": "Additional gatherings for specific groups and purposes",
+      "youth": {
+        "title": "Youth Service",
+        "time": "Friday 7:30 PM",
+        "description": "High-energy worship and relevant teaching designed specifically for young people."
+      },
+      "womens": {
+        "title": "Women's Fellowship",
+        "time": "Saturday 2:00 PM",
+        "description": "A time for women to connect, encourage one another, and grow in faith together."
+      },
+      "mens": {
+        "title": "Men's Breakfast",
+        "time": "Saturday 8:00 AM",
+        "description": "Monthly gathering for men to fellowship, share, and strengthen one another in faith."
+      },
+      "children": {
+        "title": "Children's Ministry",
+        "time": "Sunday 10:00 AM",
+        "description": "Age-appropriate teaching and activities that help children know and love Jesus."
+      }
+    },
+    "expect": {
+      "title": "What to Expect",
+      "subtitle": "Your first visit with us",
+      "worship": {
+        "title": "Passionate Worship",
+        "description": "Experience heartfelt worship with contemporary music and traditional hymns."
+      },
+      "word": {
+        "title": "Biblical Teaching",
+        "description": "Receive practical, life-changing messages rooted in God's Word."
+      },
+      "community": {
+        "title": "Warm Community",
+        "description": "Feel welcomed and valued as part of our church family from day one."
+      }
+    },
+    "cta": {
+      "title": "Join Us This Sunday",
+      "description": "We can't wait to meet you and welcome you into our church family.",
+      "button": "Plan Your Visit"
+    }
+  },
+  "events": {
+    "title": "Events",
+    "subtitle": "Stay connected with all that's happening in our church community",
+    "featured": {
+      "title": "Featured Events",
+      "subtitle": "Don't miss these special upcoming gatherings"
+    },
+    "upcoming": {
+      "title": "Upcoming Events",
+      "subtitle": "Mark your calendar for these exciting opportunities",
+      "event1": {
+        "title": "Worship Night",
+        "description": "An evening dedicated to passionate worship and encountering God's presence.",
+        "location": "Main Sanctuary"
+      },
+      "event2": {
+        "title": "Prophetic Conference",
+        "description": "Three days of powerful prophetic ministry and spiritual breakthrough.",
+        "location": "Church Building"
+      },
+      "event3": {
+        "title": "Youth Revival",
+        "description": "High-energy worship and life-changing messages for young people.",
+        "location": "Youth Hall"
+      },
+      "event4": {
+        "title": "Community Outreach",
+        "description": "Serving our local community with love and practical assistance.",
+        "location": "Local Community"
+      }
+    },
+    "categories": {
+      "all": "All Events",
+      "worship": "Worship",
+      "conference": "Conference",
+      "community": "Community",
+      "youth": "Youth",
+      "special": "Special"
+    },
+    "regular": {
+      "title": "Regular Schedule",
+      "subtitle": "Our weekly gatherings that you can always count on",
+      "sunday": {
+        "title": "Sunday Service",
+        "time": "10:00 AM",
+        "description": "Main worship service"
+      },
+      "tuesday": {
+        "title": "Prayer Meeting",
+        "time": "7:00 PM",
+        "description": "Corporate prayer time"
+      },
+      "thursday": {
+        "title": "Bible Study",
+        "time": "7:30 PM",
+        "description": "Deep Bible study"
+      }
+    },
+    "register": "Register Now",
+    "learnMore": "Learn More",
+    "cta": {
+      "title": "Stay Updated",
+      "description": "Never miss an event! Subscribe to our newsletter for the latest updates.",
+      "subscribe": "Subscribe to Newsletter",
+      "contact": "Contact Us"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We'd love to hear from you and answer any questions you may have",
+    "info": {
+      "title": "Get In Touch",
+      "subtitle": "Here are all the ways you can reach us",
+      "address": {
+        "title": "Our Location",
+        "line1": "The Greyhound, 313-315 Kirkdale",
+        "line2": "London, UK",
+        "line3": "SE26 4QB"
+      },
+      "phone": {
+        "title": "Call Us"
+      },
+      "email": {
+        "title": "Email Us"
+      },
+      "hours": {
+        "title": "Office Hours",
+        "weekdays": "Mon-Fri: 9:00 AM - 5:00 PM",
+        "saturday": "Saturday: 10:00 AM - 2:00 PM",
+        "sunday": "Sunday: After Service"
+      }
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Fill out the form below and we'll get back to you as soon as possible",
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Enter your phone number",
+      "subject": "Subject",
+      "selectSubject": "Select a subject",
+      "subjects": {
+        "general": "General Inquiry",
+        "prayer": "Prayer Request",
+        "pastoral": "Pastoral Care",
+        "events": "Events & Programs",
+        "volunteer": "Volunteer Opportunities",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Tell us how we can help you...",
+      "prayerRequest": "This is a prayer request (will be handled confidentially)",
+      "submit": "Send Message"
+    },
+    "location": {
+      "title": "Find Us",
+      "subtitle": "We're located in the heart of London and easily accessible by public transport",
+      "mapPlaceholder": "Interactive Map Coming Soon",
+      "mapNote": "Google Maps integration will be added here"
+    },
+    "directions": {
+      "tube": {
+        "title": "By Tube",
+        "description": "Nearest stations: Westminster (5 min walk), Victoria (8 min walk)"
+      },
+      "bus": {
+        "title": "By Bus",
+        "description": "Multiple bus routes stop nearby. Check TfL for current schedules."
+      },
+      "car": {
+        "title": "By Car",
+        "description": "Limited parking available. Public car parks nearby on weekends."
+      }
+    }
+  },
+  "footer": {
+    "description": "An Apostolic and Prophetic Family Church in London, leading every captive person to live the full rescue in Christ Jesus through the knowledge of God and His Word.",
+    "address": "The Greyhound, 313-315 Kirkdale, Sydenham, London, UK, SE26 4QB",
+    "quickLinks": "Quick Links",
+    "serviceTimes": "Service Times",
+    "followUs": "Follow Us",
+    "sunday": "Sunday Celebration",
+    "tuesday": "Prayer Meeting",
+    "thursday": "Bible Study",
+    "allRightsReserved": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

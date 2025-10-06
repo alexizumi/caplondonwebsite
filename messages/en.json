@@ -125,7 +125,7 @@
     },
     "sunday": {
       "title": "Sunday Celebration",
-      "time": "10:00 AM",
+      "time": "Sunday 10:00 AM",
       "description": "Our main worship service featuring dynamic praise, powerful preaching, and genuine fellowship.",
       "worship": "Spirit-filled worship and praise",
       "preaching": "Biblical teaching and preaching",
@@ -134,7 +134,7 @@
     },
     "tuesday": {
       "title": "Prayer Meeting",
-      "time": "7:00 PM",
+      "time": "Thursday 7:00 PM",
       "description": "A powerful time of corporate prayer, intercession, and seeking God's face together.",
       "intercession": "Intercession for the nations",
       "healing": "Prayer for healing and breakthrough",
@@ -143,7 +143,7 @@
     },
     "thursday": {
       "title": "Bible Study",
-      "time": "7:00 PM",
+      "time": "Tuesday 7:00 PM",
       "description": "Deep dive into God's Word with practical application for everyday living.",
       "study": "Verse-by-verse Bible study",
       "discussion": "Interactive discussion and questions",

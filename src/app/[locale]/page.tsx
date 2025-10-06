@@ -16,11 +16,11 @@ export default function HomePage() {
       const width = window.innerWidth;
 
       if (width >= 1920) {
-        setVideoSrc('/videos/church-hero.mp4'); // Full HD
+        setVideoSrc('/videos/church-hero.mp4');
       } else if (width >= 1280) {
-        setVideoSrc('/videos/church-hero-720p.mp4'); // HD
+        setVideoSrc('/videos/church-hero-720p.mp4');
       } else {
-        setVideoSrc('/videos/church-hero-480p.mp4'); // SD for mobile
+        setVideoSrc('/videos/church-hero-480p.mp4');
       }
     };
 
@@ -31,7 +31,6 @@ export default function HomePage() {
   }, []);
 
   const handleVideoCanPlay = () => {
-    console.log('Video can play - setting as loaded');
     setVideoLoaded(true);
   };
 
@@ -82,7 +81,7 @@ export default function HomePage() {
           </div>
         )}
 
-        {/* Brand Color Overlay (lighter since video already has effects) */}
+        {/* Brand Color Overlay */}
         <div className="hero-overlay"></div>
 
         {/* Animated Background Elements */}
@@ -120,7 +119,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Enhanced Loading Indicator with Progress */}
+        {/* Loading Indicator */}
         {!videoLoaded && !videoError && (
           <div className="absolute top-4 right-4 z-20">
             <div className="flex items-center space-x-2 bg-black/50 rounded-full px-4 py-2 backdrop-blur-sm">
@@ -140,52 +139,75 @@ export default function HomePage() {
         )}
       </section>
 
-      {/* Five Pillars */}
-      <section className="py-20 bg-gradient-to-r from-gray-50 to-gray-100">
-        <div className="max-w-6xl mx-auto px-4">
+      {/* Five Pillars - ELEVATION WORSHIP STYLE */}
+      <section className="py-20 bg-[#000000]">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#026c92] mb-6">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
               {t('pillars.title')}
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               {t('mission.description')}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {[
               {
-                icon: '👨‍👩‍👧‍👦',
-                titleKey: 'pillars.family',
-                color: 'from-[#b21a18] to-red-700',
+                title: t('pillars.family'),
+                color: 'from-[#026c92] to-[#025a7a]',
+                description: 'Building strong family bonds in Christ',
               },
               {
-                icon: '📚',
-                titleKey: 'pillars.discipleship',
-                color: 'from-[#026c92] to-blue-700',
+                title: t('pillars.discipleship'),
+                color: 'from-[#b21a18] to-[#8b1513]',
+                description: 'Growing in faith and knowledge',
               },
               {
-                icon: '🙏',
-                titleKey: 'pillars.worship',
-                color: 'from-[#c3d21d] to-lime-600',
+                title: t('pillars.worship'),
+                color: 'from-[#c3d21d] to-[#9fb516]',
+                description: 'Praising God with heart and soul',
               },
               {
-                icon: '⚡',
-                titleKey: 'pillars.ministry',
-                color: 'from-[#b21a18] to-[#026c92]',
+                title: t('pillars.ministry'),
+                color: 'from-[#026c92] to-[#b21a18]',
+                description: 'Serving God and community',
               },
               {
-                icon: '🌍',
-                titleKey: 'pillars.evangelism',
-                color: 'from-[#026c92] to-[#c3d21d]',
+                title: t('pillars.evangelism'),
+                color: 'from-[#b21a18] to-[#c3d21d]',
+                description: 'Sharing the Gospel with the world',
               },
             ].map((pillar, index) => (
-              <div key={index} className="group cursor-pointer">
-                <div
-                  className={`bg-gradient-to-br ${pillar.color} p-8 rounded-2xl text-center text-white transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
-                >
-                  <div className="text-4xl mb-4">{pillar.icon}</div>
-                  <h3 className="text-xl font-bold">{t(pillar.titleKey)}</h3>
+              <div key={index} className="group">
+                <div className={`relative bg-gradient-to-br ${pillar.color} rounded-2xl p-8 h-80 flex flex-col justify-between overflow-hidden hover:scale-105 transition-all duration-300 shadow-xl`}>
+                  {/* Background Pattern */}
+                  <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
+                    <div className="w-full h-full bg-white rounded-full transform translate-x-8 -translate-y-8"></div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="relative z-10">
+                    <div className="text-white/80 text-sm font-medium uppercase tracking-wider mb-3">
+                      Core Value
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-white/90 text-sm leading-relaxed">
+                      {pillar.description}
+                    </p>
+                  </div>
+
+                  {/* CTA Arrow */}
+                  <div className="relative z-10 flex justify-between items-end">
+                    <div></div>
+                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -193,101 +215,194 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-gradient-to-br from-[#026c92] via-[#b21a18] to-black text-white">
-        <div className="max-w-6xl mx-auto px-4">
+      {/* Service Times - ELEVATION WORSHIP STYLE */}
+      <section className="py-20 bg-[#1a1a1a]">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#c3d21d]">
-              {useTranslations('services')('title')}
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Find the right experience for you
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              {t('hero.description')}
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              No matter where you are, online or in person, become a part of all God is doing.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-[#c3d21d]/30">
-              <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#c3d21d] to-[#b21a18] text-black font-semibold rounded-full text-sm mb-4">
-                {useTranslations('services')('sunday.time')}
+            {[
+              {
+                icon: (
+                  <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                  </svg>
+                ),
+                title: useTranslations('services')('sunday.title'),
+                time: useTranslations('services')('sunday.time'),
+                description: useTranslations('services')('sunday.description'),
+                color: 'from-[#026c92] to-[#025a7a]',
+              },
+              {
+                icon: (
+                  <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ),
+                title: useTranslations('services')('tuesday.title'),
+                time: useTranslations('services')('tuesday.time'),
+                description: useTranslations('services')('tuesday.description'),
+                color: 'from-[#b21a18] to-[#8b1513]',
+              },
+              {
+                icon: (
+                  <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                  </svg>
+                ),
+                title: useTranslations('services')('thursday.title'),
+                time: useTranslations('services')('thursday.time'),
+                description: useTranslations('services')('thursday.description'),
+                color: 'from-[#c3d21d] to-[#9fb516]',
+              },
+            ].map((service, index) => (
+              <div key={index} className="group">
+                <div className={`bg-gradient-to-br ${service.color} rounded-2xl p-8 h-96 flex flex-col justify-between overflow-hidden hover:scale-105 transition-all duration-300 shadow-xl`}>
+                  {/* Background Pattern */}
+                  <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
+                    <div className="w-full h-full bg-white rounded-full transform translate-x-8 -translate-y-8"></div>
+                  </div>
+                  
+                  {/* Icon */}
+                  <div className="relative z-10">
+                    <div className="text-white/90 mb-6">
+                      {service.icon}
+                    </div>
+                    
+                    {/* Time Badge */}
+                    <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
+                      <span className="text-white font-semibold text-sm">{service.time}</span>
+                    </div>
+                    
+                    {/* Title */}
+                    <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
+                      {service.title}
+                    </h3>
+                    
+                    {/* Description */}
+                    <p className="text-white/90 text-sm leading-relaxed mb-6">
+                      {service.description}
+                    </p>
+                  </div>
+
+                  {/* CTA */}
+                  <div className="relative z-10">
+                    <button className="flex items-center text-white font-semibold group-hover:text-white/80 transition-colors">
+                      Learn more 
+                      <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-[#c3d21d]">
-                {useTranslations('services')('sunday.title')}
-              </h3>
-              <p className="text-gray-300">
-                {useTranslations('services')('sunday.description')}
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-[#c3d21d]/30">
-              <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#026c92] to-[#c3d21d] text-white font-semibold rounded-full text-sm mb-4">
-                {useTranslations('services')('tuesday.time')}
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-[#c3d21d]">
-                {useTranslations('services')('tuesday.title')}
-              </h3>
-              <p className="text-gray-300">
-                {useTranslations('services')('tuesday.description')}
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-[#c3d21d]/30">
-              <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#b21a18] to-[#026c92] text-white font-semibold rounded-full text-sm mb-4">
-                {useTranslations('services')('thursday.time')}
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-[#c3d21d]">
-                {useTranslations('services')('thursday.title')}
-              </h3>
-              <p className="text-gray-300">
-                {useTranslations('services')('thursday.description')}
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-black to-[#026c92] text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-[#c3d21d]">
-            {t('contactSection.title')}
-          </h2>
-          <p className="text-xl text-gray-300 mb-12">
-            {t('contactSection.description')}
+{/* Get in Touch Section - ELEVATION STYLE */}
+<section className="py-20 bg-[#000000] text-white">
+  <div className="max-w-4xl mx-auto px-4 text-center">
+    <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">
+      Get in Touch
+    </h2>
+    <p className="text-xl text-gray-400 mb-16 max-w-2xl mx-auto">
+      We'd love to hear from you! Here's how you can connect with us, wherever you are.
+    </p>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {[
+        {
+          icon: (
+            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+          ),
+          title: "Send Us an Email",
+          description: "Reach out to our support team directly via email for any inquiries or assistance.",
+          link: "Email Us",
+          href: "mailto:info@caplondonchurch.co.uk"
+        },
+        {
+          icon: (
+            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+          ),
+          title: "Give Us a Call",
+          description: "Speak with our friendly representatives during business hours for immediate support.",
+          link: "Call Now",
+          href: "tel:+442012345678"
+        },
+        {
+          icon: (
+            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          ),
+          title: "Live Chat Support",
+          description: "Connect with us instantly through our live chat for quick questions and real-time help.",
+          link: "Start Chat",
+          href: "#"
+        },
+        {
+          icon: (
+            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+          ),
+          title: "Visit Our Location",
+          description: "Find our physical office or store location and get directions to visit us in person.",
+          link: "Get Directions",
+          href: "#"
+        },
+      ].map((contact, index) => (
+        <div key={index} className="text-left">
+          <div className="text-white mb-6">
+            {contact.icon}
+          </div>
+          <h3 className="text-xl font-bold text-white mb-4">
+            {contact.title}
+          </h3>
+          <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+            {contact.description}
           </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-gradient-to-br from-[#c3d21d] to-[#b21a18] p-6 rounded-xl">
-              <div className="text-3xl mb-4">📍</div>
-              <h3 className="font-bold mb-2 text-black">
-                {t('contactSection.locationTitle')}
-              </h3>
-              <p className="text-sm text-gray-300">
-                {t('contactSection.location')}
-              </p>
-            </div>
-            <div className="bg-gradient-to-br from-[#c3d21d] to-[#b21a18] p-6 rounded-xl">
-              <div className="text-3xl mb-4">📞</div>
-              <h3 className="font-bold mb-2 text-black">
-                {t('contactSection.phoneTitle')}
-              </h3>
-              <p className="text-sm text-gray-300">
-                {t('contactSection.phone')}
-              </p>
-            </div>
-            <div className="bg-gradient-to-br from-[#c3d21d] to-[#b21a18] p-6 rounded-xl">
-              <div className="text-3xl mb-4">✉️</div>
-              <h3 className="font-bold mb-2 text-black">
-                {t('contactSection.emailTitle')}
-              </h3>
-              <p className="text-sm text-gray-300">
-                {t('contactSection.email')}
-              </p>
-            </div>
-          </div>
-
-          <button className="px-8 py-4 bg-gradient-to-r from-[#c3d21d] to-[#b21a18] text-black font-semibold rounded-full hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl">
-            {t('contactSection.cta')}
-          </button>
+          <a 
+            href={contact.href}
+            className="inline-flex items-center text-white font-semibold hover:text-gray-300 transition-colors group"
+          >
+            {contact.link}
+            <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
         </div>
-      </section>
+      ))}
+    </div>
+
+    <div className="mt-16">
+      <a 
+        href="#" 
+        className="inline-flex items-center text-white font-semibold text-lg hover:text-gray-300 transition-colors group"
+      >
+        View All Contact Options
+        <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
     </div>
   );
 }

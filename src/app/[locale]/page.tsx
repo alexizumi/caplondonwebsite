@@ -315,7 +315,7 @@ export default function HomePage() {
       Get in Touch
     </h2>
     <p className="text-xl text-gray-400 mb-16 max-w-2xl mx-auto">
-      We'd love to hear from you! Here's how you can connect with us, wherever you are.
+      We&apos;d love to hear from you! Here&apos;s how you can connect with us, wherever you are.
     </p>
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

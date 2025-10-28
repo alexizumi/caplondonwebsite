@@ -34,10 +34,15 @@
     "pillars": {
       "title": "Our Five Pillars",
       "family": "Family",
+      "familyDescription": "We are more than a congregation; we are a family, welcoming everyone with open arms and genuine love.",
       "discipleship": "Discipleship",
+      "discipleshipDescription": "Helping every believer grow in their relationship with Christ through intentional mentoring and Bible study.",
       "worship": "Worship",
+      "worshipDescription": "Worship is more than music; it's a lifestyle of wholehearted praise and adoration to God.",
       "ministry": "Ministry",
-      "evangelism": "Evangelism"
+      "ministryDescription": "Equipping and empowering every member to serve according to their God-given gifts and calling.",
+      "evangelism": "Evangelism",
+      "evangelismDescription": "Sharing the Gospel and reaching the lost through organized outreach and personal witness."
     },
     "contactSection": {
       "title": "Get In Touch",
@@ -100,8 +105,8 @@
         "description": "Committed to discipleship and teaching believers grow in their faith journey."
       },
       "member3": {
-        "name": "Apostle Jean Fraga",
-        "role": "Denomination Leader",
+        "name": "Apostle Jean and Dani Fraga",
+        "role": "Denomination Leaders",
         "description": "Passionate about raising up the next generation for God's kingdom purposes."
       },
       "member4": {

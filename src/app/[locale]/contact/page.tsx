@@ -140,7 +140,10 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="py-20 bg-gradient-to-r from-gray-50 to-gray-100">
+      <section
+        id="contact-form"
+        className="py-20 bg-gradient-to-r from-gray-50 to-gray-100"
+      >
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[#026c92] mb-6">

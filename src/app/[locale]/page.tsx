@@ -1,6 +1,7 @@
 // src/app/[locale]/page.tsx
 'use client';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export default function HomePage() {
@@ -9,6 +10,20 @@ export default function HomePage() {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const [videoSrc, setVideoSrc] = useState<string | null>(null);
+  const locale = useLocale();
+  const contactPath = `/${locale}/contact`;
+  const contactFormHref = {
+    pathname: `/${locale}/contact`,
+    hash: 'contact-form',
+  };
+  const aboutPillarsHref = {
+    pathname: `/${locale}/about`,
+    hash: 'five-pillars',
+  };
+  const aboutEventsHref = {
+    pathname: `/${locale}/events`,
+    hash: 'regular-events',
+  };
 
   // Determine optimal video size based on screen
   useEffect(() => {
@@ -59,7 +74,9 @@ export default function HomePage() {
         {/* Single Video Background */}
         {!videoError && videoSrc && (
           <div
-            className={`hero-video-container ${videoLoaded ? 'video-loaded' : 'video-loading'}`}
+            className={`hero-video-container ${
+              videoLoaded ? 'video-loaded' : 'video-loading'
+            }`}
           >
             <video
               className="hero-video-background"
@@ -139,7 +156,7 @@ export default function HomePage() {
         )}
       </section>
 
-      {/* Five Pillars - ELEVATION WORSHIP STYLE */}
+      {/* Five Pillars */}
       <section className="py-20 bg-[#000000]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
@@ -156,36 +173,38 @@ export default function HomePage() {
               {
                 title: t('pillars.family'),
                 color: 'from-[#026c92] to-[#025a7a]',
-                description: 'Building strong family bonds in Christ',
+                description: t('pillars.familyDescription'),
               },
               {
                 title: t('pillars.discipleship'),
                 color: 'from-[#b21a18] to-[#8b1513]',
-                description: 'Growing in faith and knowledge',
+                description: t('pillars.discipleshipDescription'),
               },
               {
                 title: t('pillars.worship'),
                 color: 'from-[#c3d21d] to-[#9fb516]',
-                description: 'Praising God with heart and soul',
+                description: t('pillars.worshipDescription'),
               },
               {
                 title: t('pillars.ministry'),
                 color: 'from-[#026c92] to-[#b21a18]',
-                description: 'Serving God and community',
+                description: t('pillars.ministryDescription'),
               },
               {
                 title: t('pillars.evangelism'),
                 color: 'from-[#b21a18] to-[#c3d21d]',
-                description: 'Sharing the Gospel with the world',
+                description: t('pillars.evangelismDescription'),
               },
             ].map((pillar, index) => (
               <div key={index} className="group">
-                <div className={`relative bg-gradient-to-br ${pillar.color} rounded-2xl p-8 h-80 flex flex-col justify-between overflow-hidden hover:scale-105 transition-all duration-300 shadow-xl`}>
+                <div
+                  className={`relative bg-gradient-to-br ${pillar.color} rounded-2xl p-8 h-80 flex flex-col justify-between overflow-hidden hover:scale-105 transition-all duration-300 shadow-xl`}
+                >
                   {/* Background Pattern */}
                   <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
                     <div className="w-full h-full bg-white rounded-full transform translate-x-8 -translate-y-8"></div>
                   </div>
-                  
+
                   {/* Content */}
                   <div className="relative z-10">
                     <div className="text-white/80 text-sm font-medium uppercase tracking-wider mb-3">
@@ -202,11 +221,24 @@ export default function HomePage() {
                   {/* CTA Arrow */}
                   <div className="relative z-10 flex justify-between items-end">
                     <div></div>
-                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <Link
+                      href={aboutPillarsHref}
+                      className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors"
+                    >
+                      <svg
+                        className="w-4 h-4 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
                       </svg>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -215,7 +247,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Service Times - ELEVATION WORSHIP STYLE */}
+      {/* Service Times */}
       <section className="py-20 bg-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
@@ -223,7 +255,8 @@ export default function HomePage() {
               Find the right experience for you
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              No matter where you are, online or in person, become a part of all God is doing.
+              No matter where you are, online or in person, become a part of all
+              God is doing.
             </p>
           </div>
 
@@ -231,8 +264,12 @@ export default function HomePage() {
             {[
               {
                 icon: (
-                  <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                  <svg
+                    className="w-12 h-12"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
                   </svg>
                 ),
                 title: useTranslations('services')('sunday.title'),
@@ -242,8 +279,12 @@ export default function HomePage() {
               },
               {
                 icon: (
-                  <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  <svg
+                    className="w-12 h-12"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
                 ),
                 title: useTranslations('services')('tuesday.title'),
@@ -253,39 +294,47 @@ export default function HomePage() {
               },
               {
                 icon: (
-                  <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                  <svg
+                    className="w-12 h-12"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
                   </svg>
                 ),
                 title: useTranslations('services')('thursday.title'),
                 time: useTranslations('services')('thursday.time'),
-                description: useTranslations('services')('thursday.description'),
+                description: useTranslations('services')(
+                  'thursday.description',
+                ),
                 color: 'from-[#c3d21d] to-[#9fb516]',
               },
             ].map((service, index) => (
               <div key={index} className="group">
-                <div className={`bg-gradient-to-br ${service.color} rounded-2xl p-8 h-96 flex flex-col justify-between overflow-hidden hover:scale-105 transition-all duration-300 shadow-xl`}>
+                <div
+                  className={`bg-gradient-to-br ${service.color} rounded-2xl p-8 h-96 flex flex-col justify-between overflow-hidden hover:scale-105 transition-all duration-300 shadow-xl`}
+                >
                   {/* Background Pattern */}
                   <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
                     <div className="w-full h-full bg-white rounded-full transform translate-x-8 -translate-y-8"></div>
                   </div>
-                  
+
                   {/* Icon */}
                   <div className="relative z-10">
-                    <div className="text-white/90 mb-6">
-                      {service.icon}
-                    </div>
-                    
+                    <div className="text-white/90 mb-6">{service.icon}</div>
+
                     {/* Time Badge */}
                     <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
-                      <span className="text-white font-semibold text-sm">{service.time}</span>
+                      <span className="text-white font-semibold text-sm">
+                        {service.time}
+                      </span>
                     </div>
-                    
+
                     {/* Title */}
                     <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
                       {service.title}
                     </h3>
-                    
+
                     {/* Description */}
                     <p className="text-white/90 text-sm leading-relaxed mb-6">
                       {service.description}
@@ -295,9 +344,19 @@ export default function HomePage() {
                   {/* CTA */}
                   <div className="relative z-10">
                     <button className="flex items-center text-white font-semibold group-hover:text-white/80 transition-colors">
-                      Learn more 
-                      <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      Learn more
+                      <svg
+                        className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
                       </svg>
                     </button>
                   </div>
@@ -308,101 +367,106 @@ export default function HomePage() {
         </div>
       </section>
 
-{/* Get in Touch Section - ELEVATION STYLE */}
-<section className="py-20 bg-[#000000] text-white">
-  <div className="max-w-4xl mx-auto px-4 text-center">
-    <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">
-      Get in Touch
-    </h2>
-    <p className="text-xl text-gray-400 mb-16 max-w-2xl mx-auto">
-      We&apos;d love to hear from you! Here&apos;s how you can connect with us, wherever you are.
-    </p>
-
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {[
-        {
-          icon: (
-            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-            </svg>
-          ),
-          title: "Send Us an Email",
-          description: "Reach out to our support team directly via email for any inquiries or assistance.",
-          link: "Email Us",
-          href: "mailto:info@caplondonchurch.co.uk"
-        },
-        {
-          icon: (
-            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-            </svg>
-          ),
-          title: "Give Us a Call",
-          description: "Speak with our friendly representatives during business hours for immediate support.",
-          link: "Call Now",
-          href: "tel:+442012345678"
-        },
-        {
-          icon: (
-            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
-          ),
-          title: "Live Chat Support",
-          description: "Connect with us instantly through our live chat for quick questions and real-time help.",
-          link: "Start Chat",
-          href: "#"
-        },
-        {
-          icon: (
-            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-            </svg>
-          ),
-          title: "Visit Our Location",
-          description: "Find our physical office or store location and get directions to visit us in person.",
-          link: "Get Directions",
-          href: "#"
-        },
-      ].map((contact, index) => (
-        <div key={index} className="text-left">
-          <div className="text-white mb-6">
-            {contact.icon}
-          </div>
-          <h3 className="text-xl font-bold text-white mb-4">
-            {contact.title}
-          </h3>
-          <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-            {contact.description}
+      {/* Get in Touch Section  */}
+      <section className="py-20 bg-[#000000] text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">
+            Get in Touch
+          </h2>
+          <p className="text-xl text-gray-400 mb-16 max-w-2xl mx-auto">
+            We&apos;d love to hear from you! Here&apos;s how you can connect
+            with us, wherever you are.
           </p>
-          <a 
-            href={contact.href}
-            className="inline-flex items-center text-white font-semibold hover:text-gray-300 transition-colors group"
-          >
-            {contact.link}
-            <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {[
+              {
+                icon: (
+                  <svg
+                    className="w-8 h-8"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                  </svg>
+                ),
+                title: 'Send Us an Email',
+                description:
+                  'Reach out to our support team directly via email for any inquiries or assistance.',
+                link: 'Email Us',
+                href: contactFormHref,
+              },
+              {
+                icon: (
+                  <svg
+                    className="w-8 h-8"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                  </svg>
+                ),
+                title: 'Visit Our Location',
+                description:
+                  'Find our physical office or store location and get directions to visit us in person.',
+                link: 'Get Directions',
+                href: '#',
+              },
+            ].map((contact, index) => (
+              <div key={index} className="text-left">
+                <div className="text-white mb-6">{contact.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {contact.title}
+                </h3>
+                <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                  {contact.description}
+                </p>
+                <Link
+                  href={contact.href}
+                  className="inline-flex items-center text-white font-semibold hover:text-gray-300 transition-colors group"
+                >
+                  {contact.link}
+                  <svg
+                    className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16">
+            <Link
+              href={contactPath}
+              className="inline-flex items-center text-white font-semibold text-lg hover:text-gray-300 transition-colors group"
+            >
+              View All Contact Options
+              <svg
+                className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </Link>
+          </div>
         </div>
-      ))}
-    </div>
-
-    <div className="mt-16">
-      <a 
-        href="#" 
-        className="inline-flex items-center text-white font-semibold text-lg hover:text-gray-300 transition-colors group"
-      >
-        View All Contact Options
-        <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-
+      </section>
     </div>
   );
 }

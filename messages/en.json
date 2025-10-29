@@ -283,13 +283,18 @@
       "phone": {
         "title": "Call Us"
       },
+      "WhatsApp": {
+        "title": "WhatsApp Us",
+        "number": "+44 7465 653322",
+        "clickToChat": "Click to Chat"
+      },
       "email": {
         "title": "Email Us"
       },
       "hours": {
         "title": "Office Hours",
         "weekdays": "Mon-Fri: 9:00 AM - 5:00 PM",
-        "saturday": "Saturday: 10:00 AM - 2:00 PM",
+        "saturday": "Saturday: Closed",
         "sunday": "Sunday: After Service"
       }
     },
@@ -325,8 +330,8 @@
     },
     "directions": {
       "tube": {
-        "title": "By Tube",
-        "description": "Nearest stations: Westminster (5 min walk), Victoria (8 min walk)"
+        "title": "By Overground",
+        "description": "Nearest station: Sydenham Station (3 min walk)"
       },
       "bus": {
         "title": "By Bus",
@@ -334,7 +339,7 @@
       },
       "car": {
         "title": "By Car",
-        "description": "Limited parking available. Public car parks nearby on weekends."
+        "description": "Public car parks nearby free on weekends."
       }
     }
   },

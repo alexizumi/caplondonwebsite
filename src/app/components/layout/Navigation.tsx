@@ -23,7 +23,7 @@ export default function Navigation() {
     { name: t('home'), href: `/${locale}` },
     { name: t('about'), href: `/${locale}/about` },
     { name: t('services'), href: `/${locale}/services` },
-    { name: t('events'), href: `/${locale}/events` },
+    // { name: t('events'), href: `/${locale}/events` },
     { name: t('contact'), href: `/${locale}/contact` },
   ];
 
